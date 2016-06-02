@@ -1,0 +1,38 @@
+body{
+    margin-top: 10px;
+}
+
+.cadastro{
+    margin: 0 auto;
+    float: none;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #23527c;
+    color: white;
+}
+
+.mensagem{
+    margin: 0 auto;
+    float: none;
+}
+
+.tabela{
+    
+    margin: 10px auto;
+    float: none !important;
+}
+
+.linhas{
+    border: 1px solid black;
+}
+
+a:link{
+    text-decoration:none;
+    
+    
+}
+
+.botao{
+    padding: 10px;
+}
+
