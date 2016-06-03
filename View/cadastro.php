@@ -9,13 +9,15 @@
         <script src="js/jquery.js" type="text/javascript"></script>
         <script>
         $(document).ready(function () {
+                    //Cria um AJAX para buscar os dados no controller e retornar um JSON
                     $.ajax({
                         url: "../Controller/BuscarCadastroController.php",
                         dataType: 'json',
                         success: function (data) {
-                            
+                            //Faz um ForEach do retorno do arrayJSON
                             $.each(data, function (idx, obj){
-                                $('#tabela > tbody').append('<tr><td><a href="cliente.php?id='+obj.id+'">'+obj.nome+'</td><td>'+obj.email+'</td><td>'+obj.endereco+'</td><td>'+obj.telefone+'</td></tr>');
+                                //Dentro da tabela > tBody ele cria as propriedades
+                                $('#tabela > tbody').append('<tr><td>'+obj.nome+'</td><td>'+obj.email+'</td><td>'+obj.endereco+'</td><td>'+obj.telefone+'</td></tr>');
                             });
                         }
                     });

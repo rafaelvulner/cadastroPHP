@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Dominio cadastro onde contém todas propriedades da classe
+ */
 class Cadastro {
     
     private $id;

@@ -3,6 +3,11 @@
 include_once '../Dominio/Cadastro.php';
 require_once '../conexao/Conexao.php';
 
+/**
+ * Classe CadastroDAO 
+ * Contem os métodos de persistencia com banco de dados mysql
+ */
+
 class CadastroDAO {
     
      

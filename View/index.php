@@ -17,11 +17,12 @@ and open the template in the editor.
                 $('#telefone').mask('(99)99999-9999');
             });
         </script>
+        <!--Código para validação de campos e AJAX para inserir o cadastro-->
         <script>
             $(document).ready(function () {
                 
                 $('#enviar').click(function (event) {
-                    
+                    //Código para validar os campos do formulário
                     if($('#nome').val()===""||$('#email').val()===""||$('#endereco').val()===""||$('#telefone').val()===""){
                         
                         $('#resultado').html('Existem campos vazios').fadeIn().delay(1000).fadeOut();
@@ -29,7 +30,10 @@ and open the template in the editor.
                         event.default;
                     }else{
                     
+                    //Pega as informações do botão para criar o loading
                     var $btn = $(this).button('loading');
+                    
+                    //Ajax para levar os dados até o controller
                     $.ajax({
                         url: "../Controller/CadastroController.php",
                         data: 'nome='+$('#nome').val()+'&email='+$('#email').val()+'&endereco='+$('#endereco').val()+'&telefone='+$('#telefone').val(),
@@ -37,8 +41,10 @@ and open the template in the editor.
                         type: 'post',
                         success: function (data) {
                             
+                            //Se tudo der certo ele trás o resultado
                             $('#resultado').html(data).fadeIn().delay(2000).fadeOut();
                             
+                            //Limpa os campos após trazer o resultado
                             $('#nome').val('');
                             $('#email').val('');
                             $('#endereco').val('');
