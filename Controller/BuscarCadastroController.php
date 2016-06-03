@@ -13,5 +13,3 @@ foreach ($dao->listarCadastros() as $dados) {
 
 echo json_encode($cadastro);
 die;
-
-

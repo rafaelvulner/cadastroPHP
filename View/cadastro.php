@@ -28,8 +28,11 @@
     </head>
     <body>
         <div class="container">
+            
             <div class="col-md-8 tabela">
-                <a download="tabela.xls" href="#" onclick="return ExcellentExport.excel(this, 'tabela', 'Sheet Name Here');"><button class="btn btn-primary botao">Exportar para Excel</button></a>
+                <div class="excel btn-group">
+                    <a download="tabela.xls" href="#" onclick="return ExcellentExport.excel(this, 'tabela', 'Sheet Name Here');"><button class="btn btn-primary botao">Exportar para Excel</button></a>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">Informações</div>
                     <table class="table table-bordered" id="tabela">
